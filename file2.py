@@ -4,7 +4,7 @@ class Question:
         self._answer = ""
 
     def setQuestion(self, questionText):
-        self._question = questionText + "?\n----------------"
+        self._question = questionText + "?"
 
     def setAnswer(self, questionAnswer):
         self._answer = questionAnswer

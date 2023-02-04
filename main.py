@@ -3,8 +3,7 @@ from file2 import Choices
 def askUser(prompt):
     prompt.display()
     userAnswer = input("Your answer: ")
-    print()
-    print(prompt.checkAnswer(userAnswer), "\n")
+    print(prompt.checkAnswer(userAnswer))
 
 
 def quiz():
