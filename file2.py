@@ -1,35 +1,35 @@
 class Question:
     def __init__(self):
-        self._question = ""
-        self._answer = ""
+        self.question = ""
+        self.answer = ""
 
     def setQuestion(self, questionText):
-        self._question = questionText + "?"
+        self.question = questionText + "?"
 
     def setAnswer(self, questionAnswer):
-        self._answer = questionAnswer
+        self.answer = questionAnswer
 
     def checkAnswer(self, userAnswer):
-        return userAnswer == self._answer
+        return userAnswer == self.answer
 
     def display(self):
-        print(self._question)
+        print(self.question)
 
 
 class Choices(Question):
     def __init__(self):
         super().__init__()
-        self._choices = []
+        self.choices = []
 
-    def addChoice(self, choice, correctChoice):
-        self._choices.append(choice)
-        if correctChoice:
-            answerPosition = str(len(self._choices))
-            self.setAnswer(answerPosition)
+    def addChoice(self, choice, correct):
+        self.choices.append(choice)
+        if correct:
+            answer = str(len(self.choices))
+            self.setAnswer(answer)
 
     def display(self):
         super().display()
 
-        for i in range(len(self._choices)):
+        for i in range(len(self.choices)):
             position = i + 1
-            print("%d: %s" % (position, self._choices[i]))
+            print("%d: %s" % (position, self.choices[i]))

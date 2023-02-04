@@ -2,7 +2,7 @@ from file2 import Choices
 
 def askUser(prompt):
     prompt.display()
-    userAnswer = input("Your answer: ")
+    userAnswer = input("Your answer: ") 
     print(prompt.checkAnswer(userAnswer))
 
 
